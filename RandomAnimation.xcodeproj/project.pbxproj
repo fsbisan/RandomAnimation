@@ -15,7 +15,7 @@
 		9248BD0926F9A85D0076F190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9248BD0826F9A85D0076F190 /* Assets.xcassets */; };
 		9248BD0C26F9A85D0076F190 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9248BD0A26F9A85D0076F190 /* LaunchScreen.storyboard */; };
 		9277A74726FA147C004593B1 /* Pods_RandomAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F210A3A7092A487EAC060C9 /* Pods_RandomAnimation.framework */; };
-		9277A74826FA147C004593B1 /* Pods_RandomAnimation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F210A3A7092A487EAC060C9 /* Pods_RandomAnimation.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9277A74826FA147C004593B1 /* Pods_RandomAnimation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F210A3A7092A487EAC060C9 /* Pods_RandomAnimation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -179,7 +179,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					9248BCFB26F9A8580076F190 = {
 						CreatedOnToolsVersion = 12.5.1;
