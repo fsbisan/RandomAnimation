@@ -12,10 +12,6 @@ class ViewController: UIViewController {
     
     //MARK: - IBOutlets
     @IBOutlet var presetLabel: UILabel!
-    @IBOutlet var curveLabel: UILabel!
-    @IBOutlet var forceLabel: UILabel!
-    @IBOutlet var durationLabel: UILabel!
-    @IBOutlet var delayLabel: UILabel!
     
     @IBOutlet var springAnimationView: SpringView!
     @IBOutlet var runButton: SpringButton!
@@ -32,17 +28,17 @@ class ViewController: UIViewController {
     }
     
     //MARK: - IBAction
-    @IBAction func runButtonPressed(_ sender: SpringButton) {
+    @IBAction func runButtonPressed(_ sender: UIButton) {
         setAnimationParameters(from: someAnimation)
         springAnimationView.animate()
+        setLabelsText(from: someAnimation)
         
         someAnimation = Animation.getAnimation()
         
-        setLabelsText(from: someAnimation)
         sender.setTitle("Run " + someAnimation.type.rawValue, for: .normal)
         
     }
-    //MARK: - PrivetFunc
+    //MARK: - Private Functions
     private func setAnimationParameters(from animation: Animation) {
         springAnimationView.animation = animation.type.rawValue
         springAnimationView.curve = animation.curve.rawValue
@@ -52,11 +48,13 @@ class ViewController: UIViewController {
     }
     
     private func setLabelsText(from animation: Animation){
-        presetLabel.text = "preset: " + animation.type.rawValue
-        curveLabel.text = "curve: " + animation.curve.rawValue
-        forceLabel.text = "force: " + String(format: "%.2f", animation.force)
-        durationLabel.text = "duration: " + String(format: "%.2f", animation.duration)
-        delayLabel.text = "delay: " + String(format: "%.2f", animation.delay)
+        presetLabel.text = """
+         preset: \(animation.type.rawValue)
+         curve: \(animation.curve.rawValue)
+         force: \(String(format: "%.2f", animation.force))
+         duration: \(String(format: "%.2f", animation.duration))
+         delay: \(String(format: "%.2f", animation.delay))
+        """
     }
 }
 

@@ -22,16 +22,4 @@ struct Animation {
     }
 }
 
-enum AnimationType: String, CaseIterable {
-    case shake, pop, morph, squeeze, wobble, swing,
-         flipX, flipY, fall, squeezeLeft, squeezeRight,
-         squeezeDown, squeezeUp, slideLeft, slideRight, slideDown,
-         slideUp, fadeIn, fadeOut, fadeInLeft, fadeInRight,
-         fadeInDown, fadeInUp, zoomIn, zoomOut, flash
-}
-
-enum CurveType: String, CaseIterable {
-    case spring, linear, easeIn, easeOut, easeInOut
-}
-
 
