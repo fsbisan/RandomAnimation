@@ -11,6 +11,15 @@ struct Animation {
     let force: Double
     let duration: Double
     let delay: Double
+    var description: String {
+                """
+                 preset: \(type.rawValue)
+                 curve: \(curve.rawValue)
+                 force: \(String(format: "%.2f", force))
+                 duration: \(String(format: "%.2f", duration))
+                 delay: \(String(format: "%.2f", delay))
+                """
+    }
     
     static func getAnimation() -> Animation {
         let randomAnimation = Animation(type: .allCases.randomElement() ?? .shake,

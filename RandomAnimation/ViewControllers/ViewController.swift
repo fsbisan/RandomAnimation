@@ -48,13 +48,7 @@ class ViewController: UIViewController {
     }
     
     private func setLabelsText(from animation: Animation){
-        presetLabel.text = """
-         preset: \(animation.type.rawValue)
-         curve: \(animation.curve.rawValue)
-         force: \(String(format: "%.2f", animation.force))
-         duration: \(String(format: "%.2f", animation.duration))
-         delay: \(String(format: "%.2f", animation.delay))
-        """
+        presetLabel.text = animation.description
     }
 }
 
